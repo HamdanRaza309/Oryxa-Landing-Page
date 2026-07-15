@@ -39,12 +39,12 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden glow-mesh min-h-screen">
 
-    <!-- Header Navigation -->
+    <!-- Header Navigation Bar -->
     <header class="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/85 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <!-- Logo -->
             <div class="flex items-center gap-2.5">
                 <div class="p-2 rounded-lg bg-blue-600/10 border border-blue-500/10 text-blue-600">
-                    <!-- Logo Icon -->
                     <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                     </svg>
@@ -52,23 +52,28 @@
                 <span class="font-outfit font-bold text-xl tracking-tight text-slate-900">Oryxa</span>
             </div>
             
+            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#problem" class="hover:text-blue-600 transition-colors">The Problem</a>
                 <a href="#features" class="hover:text-blue-600 transition-colors">Features</a>
-                <a href="#qae" class="hover:text-blue-600 transition-colors">AI Q&A</a>
+                <a href="#workflow" class="hover:text-blue-600 transition-colors">How It Works</a>
+                <a href="#showcase" class="hover:text-blue-600 transition-colors">Showcase</a>
                 <a href="#pricing" class="hover:text-blue-600 transition-colors">Pricing</a>
+                <a href="#faq" class="hover:text-blue-600 transition-colors">FAQ</a>
             </nav>
 
+            <!-- Sign In & Primary CTA -->
             <div class="flex items-center gap-4">
                 <a href="https://oryxa-ai.vercel.app/dashboard" class="text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors">Sign In</a>
                 <a href="https://oryxa-ai.vercel.app/dashboard" class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-sm font-semibold text-white shadow-md shadow-blue-600/10 transition-all active:scale-[0.98]">
-                    Get Started Free
+                    Get Started
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative pt-12 pb-24 overflow-hidden">
+    <section class="relative pt-16 pb-24 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
                 <!-- Hero Info -->
@@ -116,7 +121,7 @@
                             <div class="col-span-3 border-r border-slate-200 pr-2 space-y-4 text-[10px] text-slate-400">
                                 <div class="font-bold text-slate-500">Application</div>
                                 <div class="space-y-2">
-                                    <div class="flex items-center gap-1.5 text-blue-600 bg-blue-50/50 p-1.5 rounded border border-blue-100"><span class="h-2 w-2 rounded-full bg-blue-600"></span> Dashboard</div>
+                                    <div class="flex items-center gap-1.5 text-blue-600 bg-blue-550/50 p-1.5 rounded border border-blue-100"><span class="h-2 w-2 rounded-full bg-blue-600"></span> Dashboard</div>
                                     <div class="flex items-center gap-1.5 p-1.5"><span class="h-2 w-2 rounded-full bg-slate-300"></span> Q&A</div>
                                     <div class="flex items-center gap-1.5 p-1.5"><span class="h-2 w-2 rounded-full bg-slate-300"></span> Meetings</div>
                                     <div class="flex items-center gap-1.5 p-1.5"><span class="h-2 w-2 rounded-full bg-slate-300"></span> Chat</div>
@@ -152,21 +157,58 @@
         </div>
     </section>
 
-    <!-- Core Features Grid -->
-    <section id="features" class="py-24 border-t border-slate-200 bg-white">
+    <!-- Problem Statement Section -->
+    <section id="problem" class="py-20 border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">The Problem</span>
+                <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
+                    Why Developer Productivity Stalls
+                </h2>
+                <p class="text-slate-500">
+                    Software engineering teams spend more time coordinating, reading legacy code, and writing status tickets than writing production software.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-xl border border-slate-100 bg-slate-50 text-left">
+                    <div class="text-red-500 text-lg font-bold mb-3">❌ Onboarding Friction</div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        New hires spend days reading outdated README files or digging through thousands of lines of repository files to locate files and modules.
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl border border-slate-100 bg-slate-50 text-left">
+                    <div class="text-red-500 text-lg font-bold mb-3">❌ Disconnected Audio Notes</div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Decisions made in meetings get lost. Manually transcribing voice files and writing clean Jira/Kanban tasks takes valuable engineering hours.
+                    </p>
+                </div>
+                <div class="p-6 rounded-xl border border-slate-100 bg-slate-50 text-left">
+                    <div class="text-red-500 text-lg font-bold mb-3">❌ Context Switching Fatigue</div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Teams bounce between Slack, GitHub PR logs, Kanban boards, and meeting documents. High friction leads to developer burnout.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Grid Section -->
+    <section id="features" class="py-24 border-t border-slate-200 bg-slate-50/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-16">
             <div class="space-y-4 max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Features</span>
                 <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
                     Engineered to Build Faster
                 </h2>
                 <p class="text-slate-500">
-                    Oryxa integrates seven central features of software team workflows, matching them with production AI models.
+                    Oryxa integrates seven central modules of software team workflows, matching them with production AI models.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Feature 1: Dashboard -->
-                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 text-left hover:border-blue-500/50 hover:bg-white transition-all group shadow-sm">
+                <div class="p-6 rounded-xl border border-slate-200 bg-white text-left hover:border-blue-500/50 transition-all group shadow-sm">
                     <div class="p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/10 text-blue-600 w-fit mb-5">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
@@ -181,7 +223,7 @@
                 </div>
 
                 <!-- Feature 2: Q&A -->
-                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 text-left hover:border-blue-500/50 hover:bg-white transition-all group shadow-sm">
+                <div class="p-6 rounded-xl border border-slate-200 bg-white text-left hover:border-blue-500/50 transition-all group shadow-sm">
                     <div class="p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/10 text-blue-600 w-fit mb-5">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -194,7 +236,7 @@
                 </div>
 
                 <!-- Feature 3: Meetings -->
-                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 text-left hover:border-purple-500/50 hover:bg-white transition-all group shadow-sm">
+                <div class="p-6 rounded-xl border border-slate-200 bg-white text-left hover:border-purple-500/50 transition-all group shadow-sm">
                     <div class="p-2.5 rounded-lg bg-purple-500/10 border border-purple-500/10 text-purple-600 w-fit mb-5">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
@@ -207,7 +249,7 @@
                 </div>
 
                 <!-- Feature 4: Chat -->
-                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 text-left hover:border-indigo-500/50 hover:bg-white transition-all group shadow-sm">
+                <div class="p-6 rounded-xl border border-slate-200 bg-white text-left hover:border-indigo-500/50 transition-all group shadow-sm">
                     <div class="p-2.5 rounded-lg bg-indigo-500/10 border border-indigo-500/10 text-indigo-600 w-fit mb-5">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
@@ -220,7 +262,7 @@
                 </div>
 
                 <!-- Feature 5: Tickets -->
-                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 text-left hover:border-amber-500/50 hover:bg-white transition-all group shadow-sm">
+                <div class="p-6 rounded-xl border border-slate-200 bg-white text-left hover:border-amber-500/50 transition-all group shadow-sm">
                     <div class="p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/10 text-amber-600 w-fit mb-5">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 6v10.5m-9-10.5v10.5m-3-12h15a1.5 1.5 0 0 1 1.5 1.5v12a1.5 1.5 0 0 1-1.5 1.5h-15a1.5 1.5 0 0 1-1.5-1.5v-12a1.5 1.5 0 0 1 1.5-1.5z" />
@@ -233,7 +275,7 @@
                 </div>
 
                 <!-- Feature 6: Reports -->
-                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 text-left hover:border-emerald-500/50 hover:bg-white transition-all group shadow-sm">
+                <div class="p-6 rounded-xl border border-slate-200 bg-white text-left hover:border-emerald-500/50 transition-all group shadow-sm">
                     <div class="p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/10 text-emerald-600 w-fit mb-5">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -245,8 +287,8 @@
                     </p>
                 </div>
 
-                <!-- Feature 7: Billing (centered below others on desktop) -->
-                <div class="p-6 rounded-xl border border-slate-200 bg-slate-50/50 text-left hover:border-rose-500/50 hover:bg-white transition-all group shadow-sm lg:col-span-3 lg:w-1/3 lg:mx-auto">
+                <!-- Feature 7: Billing (centered below others) -->
+                <div class="p-6 rounded-xl border border-slate-200 bg-white text-left hover:border-rose-500/50 transition-all group shadow-sm lg:col-span-3 lg:w-1/3 lg:mx-auto">
                     <div class="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/10 text-rose-600 w-fit mb-5">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                             <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
@@ -262,124 +304,399 @@
         </div>
     </section>
 
-    <!-- Simulated Interactive Q&A Demo Section -->
-    <section id="qae" class="py-24 border-t border-slate-200 bg-slate-50/30">
+    <!-- How It Works Section -->
+    <section id="workflow" class="py-24 border-t border-slate-200 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <!-- Text detail -->
-                <div class="lg:col-span-5 space-y-6 text-left">
-                    <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
-                        Codebase Knowledge at Your Fingertips
-                    </h2>
-                    <p class="text-slate-600">
-                        Oryxa digests files on check-in. Ask questions about design systems, environment requirements, or component routing, and watch the AI retrieve relevant files and code contents instantly.
-                    </p>
-                    <ul class="space-y-3.5 text-sm text-slate-700">
-                        <li class="flex items-center gap-2">
-                            <span class="text-emerald-600">✔</span> Optimized RAG similarity algorithms
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-emerald-600">✔</span> Context-size safety truncations
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-emerald-600">✔</span> Integrated Markdown parser
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Live Chat Simulator -->
-                <div class="lg:col-span-7">
-                    <div class="rounded-xl border border-slate-200 bg-white shadow-md overflow-hidden text-left">
-                        <div class="px-4 py-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
-                            <span class="text-xs font-semibold text-slate-500">AI Chat Assistant Simulator</span>
-                            <span class="text-[10px] text-emerald-600 font-mono font-semibold">● Status: Active</span>
-                        </div>
-                        <div class="p-4 space-y-4 text-xs font-mono">
-                            <!-- Question -->
-                            <div class="flex items-start gap-2.5">
-                                <div class="h-6 w-6 rounded-full bg-slate-200 shrink-0 flex items-center justify-center text-[10px] text-slate-700 font-bold shadow-sm">HR</div>
-                                <div class="p-3 bg-slate-100 rounded-lg max-w-[80%] text-slate-800">
-                                    Which file should I edit to change the core database client?
-                                </div>
-                            </div>
-                            <!-- Answer Stream Simulator -->
-                            <div class="flex items-start gap-2.5">
-                                <div class="h-6 w-6 rounded-full bg-blue-600 shrink-0 flex items-center justify-center text-[10px] text-white font-bold shadow-sm">O</div>
-                                <div class="p-3 bg-slate-50 border border-slate-200 rounded-lg max-w-[80%] space-y-3 text-slate-700">
-                                    <p class="text-slate-400">Searching codebase...</p>
-                                    <div class="flex items-center gap-1.5 p-1.5 bg-white border border-slate-200 rounded text-[10px] text-blue-600 font-medium">
-                                        📄 Referenced: <span class="text-slate-600 font-normal">src/server/db.ts</span>
-                                    </div>
-                                    <p>
-                                        To change the database client, edit <span class="text-slate-900 font-bold">src/server/db.ts</span>. This script configures <span class="text-blue-600">PrismaClient</span> and registers it as a global database singleton for hot-reloads:
-                                    </p>
-                                    <pre class="p-2 bg-slate-950 rounded text-[9px] overflow-x-auto text-emerald-400">export const db = globalForPrisma.prisma ?? createPrismaClient();</pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing / Token Section -->
-    <section id="pricing" class="py-24 border-t border-slate-200 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-16">
-            <div class="space-y-4 max-w-3xl mx-auto">
+            <div class="text-center space-y-4 max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Workflow</span>
                 <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
-                    Simple, Credit-Based Pricing
+                    From Repository to Insights in 3 Steps
                 </h2>
                 <p class="text-slate-500">
-                    Oryxa runs on credit tokens. 1 token = 1 codebase file analyzed. Keep tracking of credits directly from your profile.
+                    Oryxa syncs seamlessly behind the scenes without interrupting your daily build pipeline.
                 </p>
             </div>
 
-            <!-- Pricing Cards container -->
-            <div class="max-w-md mx-auto relative group">
-                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-400 to-indigo-400 opacity-20 blur-xl group-hover:opacity-30 transition-all"></div>
-                <div class="relative p-8 rounded-xl border border-slate-200 bg-white text-left space-y-6 shadow-md">
-                    <div class="space-y-1">
-                        <h3 class="font-outfit font-bold text-xl text-slate-900">Developer Starter</h3>
-                        <p class="text-slate-400 text-xs">Unlock AI insights for your development projects.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Connect -->
+                <div class="p-6 text-center space-y-4">
+                    <div class="h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-outfit font-bold text-lg mx-auto shadow-sm">
+                        1
                     </div>
-                    
-                    <div class="flex items-baseline text-slate-900">
-                        <span class="font-outfit font-extrabold text-5xl tracking-tight">150</span>
-                        <span class="ml-1.5 text-sm font-semibold text-slate-500">Credits Free</span>
+                    <h3 class="font-outfit font-bold text-lg text-slate-900">Connect GitHub Repo</h3>
+                    <p class="text-sm text-slate-500">
+                        Authorize your GitHub profile and select a repository. Connect via secure Clerk credentials in seconds.
+                    </p>
+                </div>
+
+                <!-- Analyze -->
+                <div class="p-6 text-center space-y-4">
+                    <div class="h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-outfit font-bold text-lg mx-auto shadow-sm">
+                        2
                     </div>
+                    <h3 class="font-outfit font-bold text-lg text-slate-900">AI Vector Indexing</h3>
+                    <p class="text-sm text-slate-500">
+                        Oryxa crawls codebases recursively. Text chunks and file summaries are mapped into PGVector HNSW similarity search indexes.
+                    </p>
+                </div>
 
-                    <ul class="space-y-3.5 text-xs text-slate-600 border-t border-b border-slate-200 py-5">
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-600 font-bold">✔</span> Up to 150 repository files indexed free
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-600 font-bold">✔</span> Cosine pgvector Code Q&A searches
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-600 font-bold">✔</span> Real-time Team and DM Pusher channels
-                        </li>
-                        <li class="flex items-center gap-2">
-                            <span class="text-blue-600 font-bold">✔</span> Stripe-connected credit buying additions
-                        </li>
-                    </ul>
-
-                    <a href="https://oryxa-ai.vercel.app/dashboard" class="w-full inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 font-semibold text-white transition-all shadow-md shadow-blue-500/10 active:scale-[0.98]">
-                        Claim Free Credits
-                    </a>
+                <!-- Query -->
+                <div class="p-6 text-center space-y-4">
+                    <div class="h-12 w-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-outfit font-bold text-lg mx-auto shadow-sm">
+                        3
+                    </div>
+                    <h3 class="font-outfit font-bold text-lg text-slate-900">Collaborate & Answer</h3>
+                    <p class="text-sm text-slate-500">
+                        Chat directly with files, auto-transcribe recordings to Kanban boards, and check real-time commit logs.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action Banner -->
-    <section class="py-20 border-t border-slate-200 bg-slate-50/50">
+    <!-- Benefits Section -->
+    <section class="py-24 border-t border-slate-200 bg-slate-50/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600">The Benefits</span>
+                    <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900 leading-tight">
+                        Designed for High-Performance Teams
+                    </h2>
+                    <p class="text-slate-600">
+                        Oryxa simplifies daily operations, reduces cognitive overload, and saves developer time from day one.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm space-y-3">
+                        <div class="text-blue-600 font-bold text-xl">⏳ Time Saved</div>
+                        <p class="text-xs text-slate-500">
+                            Cut onboarding and technical exploration loops by up to 75% via instant interactive code context responses.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm space-y-3">
+                        <div class="text-blue-600 font-bold text-xl">📉 Cost Reduction</div>
+                        <p class="text-xs text-slate-500">
+                            Consolidate codebase documentation, Kanban ticketing, meeting note trackers, and team chats into a single developer portal.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm space-y-3">
+                        <div class="text-blue-600 font-bold text-xl">🚀 Productivity Boost</div>
+                        <p class="text-xs text-slate-500">
+                            Automate administrative tasks: generate Kanban tickets directly from transcripts and auto-compile weekly work summaries.
+                        </p>
+                    </div>
+                    <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm space-y-3">
+                        <div class="text-blue-600 font-bold text-xl">🔒 Enterprise Security</div>
+                        <p class="text-xs text-slate-500">
+                            All vector embeddings are indexed safely. Safe chunking and rate limits keep API integrations stable and reliable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase Section -->
+    <section id="showcase" class="py-24 border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Product Showcase</span>
+                <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
+                    Experience the Interface
+                </h2>
+                <p class="text-slate-500">
+                    Explore live modules and interface visualizations built directly into Oryxa.
+                </p>
+            </div>
+
+            <!-- Showcase Mockup Tabs / Live Simulator -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Selector List -->
+                <div class="lg:col-span-4 flex flex-col justify-center gap-3">
+                    <button onclick="switchTab('qa-tab')" class="tab-btn p-4 rounded-xl text-left border transition-all text-blue-600 border-blue-500/20 bg-blue-50/50 shadow-sm">
+                        <div class="font-bold text-sm">Interactive Q&A Simulator</div>
+                        <div class="text-[11px] text-slate-500 mt-1">Ask questions and view semantic source-file retrievals.</div>
+                    </button>
+                    <button onclick="switchTab('tickets-tab')" class="tab-btn p-4 rounded-xl text-left border border-slate-200 hover:bg-slate-50 transition-all">
+                        <div class="font-bold text-sm text-slate-800">Kanban Board & Ticket Cards</div>
+                        <div class="text-[11px] text-slate-400 mt-1">Visualize tickets compiled from meeting notes.</div>
+                    </button>
+                </div>
+
+                <!-- Showcase Viewer Screen -->
+                <div class="lg:col-span-8">
+                    <!-- Q&A Tab View -->
+                    <div id="qa-tab" class="tab-view block rounded-xl border border-slate-200 bg-slate-50 shadow-md overflow-hidden text-left h-full">
+                        <div class="px-4 py-3 bg-white border-b border-slate-200 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-slate-500">Q&A Chat Showcase</span>
+                            <span class="text-[10px] text-emerald-600 font-mono font-semibold">● Live Answer View</span>
+                        </div>
+                        <div class="p-6 space-y-4 text-xs font-mono">
+                            <div class="flex items-start gap-2.5">
+                                <div class="h-6 w-6 rounded-full bg-slate-200 shrink-0 flex items-center justify-center text-[10px] text-slate-700 font-bold shadow-sm">HR</div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-lg max-w-[80%] text-slate-800 shadow-sm">
+                                    Which file contains the database client configuration?
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-2.5">
+                                <div class="h-6 w-6 rounded-full bg-blue-600 shrink-0 flex items-center justify-center text-[10px] text-white font-bold shadow-sm">O</div>
+                                <div class="p-3 bg-white border border-slate-200 rounded-lg max-w-[80%] space-y-3 text-slate-700 shadow-sm">
+                                    <div class="flex items-center gap-1.5 p-1.5 bg-blue-50 border border-blue-100 rounded text-[10px] text-blue-600 font-medium">
+                                        📄 Referenced File: <span class="text-slate-600 font-normal">src/server/db.ts</span>
+                                    </div>
+                                    <p>
+                                        To change the database client setup, modify <span class="text-slate-900 font-bold">src/server/db.ts</span>. This script configures <span class="text-blue-600">PrismaClient</span>:
+                                    </p>
+                                    <pre class="p-2.5 bg-slate-950 rounded text-[9px] overflow-x-auto text-emerald-400">export const db = globalForPrisma.prisma ?? createPrismaClient();</pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tickets Tab View -->
+                    <div id="tickets-tab" class="tab-view hidden rounded-xl border border-slate-200 bg-slate-50 shadow-md overflow-hidden text-left h-full">
+                        <div class="px-4 py-3 bg-white border-b border-slate-200 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-slate-500">Kanban Tickets Showcase</span>
+                            <span class="text-[10px] text-blue-600 font-semibold">Workspace View</span>
+                        </div>
+                        <!-- Kanban Column -->
+                        <div class="p-6 grid grid-cols-2 gap-4">
+                            <!-- TODO Column -->
+                            <div class="space-y-3">
+                                <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">TO DO</div>
+                                <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm space-y-2">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-[9px] px-2 py-0.5 rounded bg-red-50 text-red-600 border border-red-100 font-bold">URGENT</span>
+                                        <span class="text-[8px] text-slate-400">#42</span>
+                                    </div>
+                                    <div class="text-[11px] font-bold text-slate-800">Resolve database concurrency bottleneck</div>
+                                    <p class="text-[9px] text-slate-400">Add pgvector index configurations to optimize semantic searches.</p>
+                                </div>
+                            </div>
+                            <!-- IN PROGRESS Column -->
+                            <div class="space-y-3">
+                                <div class="text-[10px] font-bold text-slate-400 tracking-wider uppercase">IN PROGRESS</div>
+                                <div class="p-4 bg-white border border-slate-200 rounded-lg shadow-sm space-y-2">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-[9px] px-2 py-0.5 rounded bg-blue-50 text-blue-600 border border-blue-100 font-bold">MEDIUM</span>
+                                        <span class="text-[8px] text-slate-400">#45</span>
+                                    </div>
+                                    <div class="text-[11px] font-bold text-slate-800">Design static landing page mockup</div>
+                                    <p class="text-[9px] text-slate-400">Generate simple lightweight HTML5 page with unified features layout.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics / Metrics Section -->
+    <section class="py-20 border-t border-slate-200 bg-slate-50/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-1">
+                    <div class="font-outfit font-extrabold text-4xl text-blue-600">10k+</div>
+                    <div class="text-xs text-slate-500 font-medium">Files Analyzed Daily</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="font-outfit font-extrabold text-4xl text-blue-600">&lt; 150ms</div>
+                    <div class="text-xs text-slate-500 font-medium">Cosine Vector Latency</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="font-outfit font-extrabold text-4xl text-blue-600">75%</div>
+                    <div class="text-xs text-slate-500 font-medium">Onboarding Speedup</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="font-outfit font-extrabold text-4xl text-blue-600">O(1)</div>
+                    <div class="text-xs text-slate-500 font-medium">Git Count Requests</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 border-t border-slate-200 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">Pricing Plans</span>
+                <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
+                    Predictable & Scalable Pricing
+                </h2>
+                <p class="text-slate-500">
+                    Oryxa runs on credit tokens. 1 token = 1 codebase file analyzed. Choose the plan that fits your build pipeline.
+                </p>
+            </div>
+
+            <!-- Pricing Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 items-stretch">
+                <!-- Free Plan -->
+                <div class="p-8 rounded-xl border border-slate-200 bg-white space-y-6 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-outfit font-bold text-lg text-slate-900">Starter Free</h3>
+                            <p class="text-slate-400 text-xs mt-1">For independent developers.</p>
+                        </div>
+                        <div class="flex items-baseline text-slate-900">
+                            <span class="font-outfit font-extrabold text-4xl tracking-tight">150</span>
+                            <span class="ml-1 text-sm font-semibold text-slate-400">Tokens free</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-600">
+                            <li>✔ 150 repository files free</li>
+                            <li>✔ Basic GitHub sync</li>
+                            <li>✔ Vector codebase Q&A</li>
+                            <li>✔ Public channels team chat</li>
+                        </ul>
+                    </div>
+                    <a href="https://oryxa-ai.vercel.app/dashboard" class="w-full inline-flex items-center justify-center py-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-xs font-bold text-slate-700 transition-all active:scale-[0.98]">
+                        Claim Free Tokens
+                    </a>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="p-8 rounded-xl border-2 border-blue-600 bg-white space-y-6 flex flex-col justify-between shadow-md relative">
+                    <span class="absolute top-0 right-6 -translate-y-1/2 px-2.5 py-0.5 rounded-full bg-blue-600 text-white font-bold text-[9px] uppercase tracking-wider">Popular</span>
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-outfit font-bold text-lg text-slate-900">Pro Tier</h3>
+                            <p class="text-slate-400 text-xs mt-1">For scaling software teams.</p>
+                        </div>
+                        <div class="flex items-baseline text-slate-900">
+                            <span class="font-outfit font-extrabold text-4xl tracking-tight">$19</span>
+                            <span class="ml-1 text-sm font-semibold text-slate-400">/ month</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-600">
+                            <li>✔ **5,000 credit tokens** included</li>
+                            <li>✔ Unlimited GitHub repositories</li>
+                            <li>✔ AI meeting to ticket generator</li>
+                            <li>✔ Pusher real-time chat & DMs</li>
+                            <li>✔ Weekly PDF & markdown work reports</li>
+                        </ul>
+                    </div>
+                    <a href="https://oryxa-ai.vercel.app/dashboard" class="w-full inline-flex items-center justify-center py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-xs font-bold text-white transition-all shadow-md shadow-blue-500/10 active:scale-[0.98]">
+                        Subscribe to Pro
+                    </a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="p-8 rounded-xl border border-slate-200 bg-white space-y-6 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-outfit font-bold text-lg text-slate-900">Enterprise Custom</h3>
+                            <p class="text-slate-400 text-xs mt-1">For organizations requiring compliance.</p>
+                        </div>
+                        <div class="flex items-baseline text-slate-900">
+                            <span class="font-outfit font-bold text-2xl tracking-tight">Custom Plan</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-slate-600">
+                            <li>✔ Unlimited tokens & pipelines</li>
+                            <li>✔ Self-hosted vector databases</li>
+                            <li>✔ Strict enterprise security compliance</li>
+                            <li>✔ Dedicated customer success manager</li>
+                        </ul>
+                    </div>
+                    <a href="https://oryxa-ai.vercel.app/dashboard" class="w-full inline-flex items-center justify-center py-2.5 rounded-lg border border-slate-200 hover:bg-slate-50 text-xs font-bold text-slate-700 transition-all active:scale-[0.98]">
+                        Contact Enterprise Support
+                    </a>
+                </div>
+            </div>
+
+            <!-- Feature Comparison Table -->
+            <div class="max-w-4xl mx-auto overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-sm">
+                <table class="w-full text-left border-collapse text-xs">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200 text-slate-500">
+                            <th class="p-4 font-semibold">Features comparison</th>
+                            <th class="p-4 font-semibold">Starter</th>
+                            <th class="p-4 font-semibold">Pro</th>
+                            <th class="p-4 font-semibold">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 text-slate-700">
+                        <tr>
+                            <td class="p-4 font-bold">GitHub Sync Limit</td>
+                            <td class="p-4">1 Repository</td>
+                            <td class="p-4">Unlimited Repositories</td>
+                            <td class="p-4">Unlimited Repositories</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">Vector Database Search</td>
+                            <td class="p-4">Standard</td>
+                            <td class="p-4">Optimized HNSW search</td>
+                            <td class="p-4">Dedicated/Isolated instance</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">Meeting transcription limit</td>
+                            <td class="p-4">Not included</td>
+                            <td class="p-4">Up to 60 mins/audio</td>
+                            <td class="p-4">Unlimited duration</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-bold">Support Tier</td>
+                            <td class="p-4">Standard Email</td>
+                            <td class="p-4">24/7 Slack & Support</td>
+                            <td class="p-4">Dedicated Account Manager</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 border-t border-slate-200 bg-slate-50/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <span class="text-xs font-bold uppercase tracking-wider text-blue-600">FAQ</span>
+                <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
+                    Frequently Asked Questions
+                </h2>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Q1: Pricing -->
+                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm text-left">
+                    <h4 class="font-bold text-sm text-slate-900 mb-2">How do credit tokens work?</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Oryxa counts credit tokens to index codebase file counts. 1 token maps to 1 file checked in. You start with 150 free token credits, and can add more anytime through Stripe checkout.
+                    </p>
+                </div>
+                <!-- Q2: Security -->
+                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm text-left">
+                    <h4 class="font-bold text-sm text-slate-900 mb-2">Is my source code secure?</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Yes. Oryxa connects directly to GitHub. We compile your repo and generate isolated vector representations for semantic search. We do not store raw codebase files outside your session lookup context.
+                    </p>
+                </div>
+                <!-- Q3: Support -->
+                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm text-left">
+                    <h4 class="font-bold text-sm text-slate-900 mb-2">What support tiers are available?</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Free tier users have standard email support. Pro and Enterprise subscribers receive priority email support and custom Slack channel access with our engineering team.
+                    </p>
+                </div>
+                <!-- Q4: Cancellation -->
+                <div class="p-6 bg-white border border-slate-200 rounded-xl shadow-sm text-left">
+                    <h4 class="font-bold text-sm text-slate-900 mb-2">Can I cancel my subscription or get refunds?</h4>
+                    <p class="text-xs text-slate-500 leading-relaxed">
+                        Yes. You can cancel your monthly Pro subscription at any time. Unused credit additions can be refunded by contacting help support within 14 days of purchase.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action (CTA Closing Banner) -->
+    <section class="py-24 border-t border-slate-200 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
             <h2 class="font-outfit font-bold text-3xl sm:text-4xl text-slate-900">
-                Supercharge Your Development Today
+                Ready to Supercharge Your Team?
             </h2>
             <p class="text-slate-500 text-sm max-w-xl mx-auto">
-                No credit card required to start. Connect your repository and let Oryxa parse, transcribe, and explain your project files.
+                Join engineering teams optimizing codebase onboarding, meeting translations, and ticket pipelines with Oryxa. Get started free with 150 tokens.
             </p>
             <a href="https://oryxa-ai.vercel.app/dashboard" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 font-semibold text-white shadow-md shadow-blue-500/10 transition-all active:scale-95">
                 Register with GitHub & Clerk
@@ -387,19 +704,86 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-200 bg-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-            <div class="flex items-center gap-2">
-                <svg class="h-4 w-4 text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Oryxa © 2026. All rights reserved.</span>
+    <!-- Footer Section -->
+    <footer class="border-t border-slate-200 bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-xs text-slate-500 text-left mb-8">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <svg class="h-5 w-5 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    <span class="font-outfit font-bold text-sm text-slate-900">Oryxa</span>
+                </div>
+                <p class="text-slate-400 leading-relaxed text-[11px]">
+                    AI-powered developer environment designed to optimize GitHub workflows, code search, meeting summaries, and ticketing.
+                </p>
             </div>
-            <div class="flex gap-6">
-                <a href="https://oryxa-ai.vercel.app/dashboard" class="hover:text-slate-600">App Dashboard</a>
-                <a href="https://github.com" class="hover:text-slate-600">GitHub</a>
+            
+            <div class="space-y-3">
+                <span class="font-bold text-slate-900 tracking-wide uppercase text-[10px]">Product</span>
+                <ul class="space-y-2">
+                    <li><a href="#features" class="hover:text-slate-900">All Features</a></li>
+                    <li><a href="#showcase" class="hover:text-slate-900">Product Showcase</a></li>
+                    <li><a href="#pricing" class="hover:text-slate-900">Pricing Models</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <span class="font-bold text-slate-900 tracking-wide uppercase text-[10px]">Resources</span>
+                <ul class="space-y-2">
+                    <li><a href="https://github.com" class="hover:text-slate-900">GitHub Portal</a></li>
+                    <li><a href="https://oryxa-ai.vercel.app/dashboard" class="hover:text-slate-900">App Dashboard</a></li>
+                    <li><a href="#faq" class="hover:text-slate-900">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <span class="font-bold text-slate-900 tracking-wide uppercase text-[10px]">Legal & Support</span>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-slate-900">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-slate-900">Terms of Service</a></li>
+                    <li><a href="mailto:support@oryxa.ai" class="hover:text-slate-900">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+            <span>Oryxa © 2026. All rights reserved.</span>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-slate-600">Twitter</a>
+                <a href="#" class="hover:text-slate-600">GitHub</a>
+                <a href="#" class="hover:text-slate-600">LinkedIn</a>
             </div>
         </div>
     </footer>
 
+    <!-- Tab switcher script -->
+    <script>
+        function switchTab(tabId) {
+            // Hide all tab views
+            const views = document.querySelectorAll('.tab-view');
+            views.forEach(view => {
+                view.classList.add('hidden');
+                view.classList.remove('block');
+            });
+            
+            // Show target tab view
+            const targetView = document.getElementById(tabId);
+            targetView.classList.remove('hidden');
+            targetView.classList.add('block');
+
+            // Reset tab buttons states
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('text-blue-600', 'border-blue-500/20', 'bg-blue-50/50', 'shadow-sm');
+                btn.classList.add('border-slate-200');
+                btn.querySelector('.font-bold').classList.remove('text-slate-800');
+                btn.querySelector('.font-bold').classList.add('text-slate-800');
+            });
+
+            // Activate current button
+            const activeBtn = event.currentTarget;
+            activeBtn.classList.add('text-blue-600', 'border-blue-500/20', 'bg-blue-50/50', 'shadow-sm');
+            activeBtn.classList.remove('border-slate-200');
+        }
+    </script>
 </body>
 </html>
